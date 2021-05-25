@@ -10,15 +10,24 @@
 
     <script>
         function runButtonPressed() {
+            var n = Math.floor(Math.random() * 100) + 1;
             var numbers = [];
+            createSequentialNumbers(numbers, n)
+            show(numbers);
             //prac1-7 1からNまでの数を順にN個挿入する関数を作る
+        }
+        function createSequentialNumbers(array, n) {
+            for (var v = 1; v < n; v++) {
+                array.push(v);
+            }
+        }
+
             //関数名：createSequentialNumbers(array, n)
             //できたら，関数定義をaandd.jsに移す
             //prac1-8 N個の乱数を挿入する関数を作る
             //関数名：createRandomNumbers(array, n)
             //できたら，関数定義をaandd.jsに移す
-            show(numbers);
-        }
+            //show(numbers);
     </script>
 
 </head>
