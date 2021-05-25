@@ -12,17 +12,14 @@ function show(array) {
 }
 
 function createSequentialNumbers(array, n) {
-    var n = Math.floor(Math.random() * 100) + 1;
-    for (var v = 1; v < n; v++) {
-        array.push(v);
+    for (var i = 1; i < n+1; i++) {
+        array.push(i);
     }
 }
 
-unction createRandomNumbers(array, n) {
-    for (var v = 1; v < n; v++) {
-        for (var i = 0; i < n; i++) {
-            ran = Math.floor(Math.random() * 100) + 1;
-            array.push(ran);
-        }
+function createRandomNumbers(array, n) {
+    for (var i = 1; i < n+1; i++) {
+        ran = Math.floor(Math.random() * 100) + 1;
+        array.push(ran);
     }
 }
