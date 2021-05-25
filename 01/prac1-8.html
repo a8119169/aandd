@@ -10,20 +10,20 @@
 
     <script>
         function runButtonPressed() {
-            var n = Math.floor(Math.random() * 100) + 1;
+
             var numbers = [];
-            createRandomNumbers(numbers, n);          
+            createRandomNumbers(numbers, 10);
             show(numbers);
             //prac1-7 1からNまでの数を順にN個挿入する関数を作る
         }
         function createRandomNumbers(array, n) {
-            for (var v = 1; v < n; v++) {
+            //for (var v = 1; v < n; v++) {
             for (var i = 0; i < n; i++) {
-                    ran = Math.floor(Math.random() * 100) + 1;
-                    array.push(ran);
-                }
-                }
+                ran = Math.floor(Math.random() * 100) + 1;
+                array.push(ran);
             }
+            //}
+        }
 
             //prac1-8 N個の乱数を挿入する関数を作る
             //関数名：createRandomNumbers(array, n)
