@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            //prac3-2 10個の乱数の平均を求める
+
+            var numbers = [];
+            createRandomNumbers(numbers, 10);
+            show(numbers);
+
+            for (var v = 0; v < 10; v++) {
+                for (j = 0; j < 10; j++){
+                var c1 = numbers[j];
+                var c2 = numbers[j+1];
+
+               if (c1 > c2){
+                    numbers[j] = c2;
+                    numbers[j+1] = c1;
+                    console.log(c2)    
+                }}
+                show(numbers)
+                
+            }
+            
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>５−１バブルソート</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
