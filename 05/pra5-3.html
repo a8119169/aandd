@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            //prac3-2 10個の乱数の平均を求める
+
+            var numbers = [];
+            var numbers2 = [];
+
+            createRandomNumbers(numbers,5,10);
+            var startTime = new Date();
+        
+
+            show(numbers);
+            show(numbers2);
+
+            varx = numbers[0];
+            for(var j = 0; j <numbers.length; j++)
+            var minindex = 0;
+            var min = 10000;
+
+            for(var i = 0 ; i < numbers.length;i ++){
+                if (numbers[i] < numbers[minindex]){
+                    min = numbers[i];
+                    minindex = i;
+                }
+            }
+                numbers2.push(min);
+                numbers[minindex] = 10000;
+
+                show(numbers);
+                show(numbers2);
+        }
+
+            //show(minindex);
+            //show(min)
+            //for(i = 0; i < 10; i++){
+            //var mark =numbers[0];
+            //console.log(mark)
+            
+            //if(mark>numbers[1]){
+              //  var min = numbers[1];
+                //mark = tmp;
+                //numbers[0];
+            
+
+            
+
+            
+            
+        
+        show(numbers);
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>５−3 挿入ソート</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
