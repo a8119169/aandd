@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        var student = {};
+
+        /*$().ready(function () {
+            fruits['apple'] = 'りんご';
+            fruits['orange'] = 'みかん';
+            fruits['りんご'] = 'apple';
+            fruits['みかん'] = 'orange';
+        });*/
+
+        function registerButtonPressed() {
+            var name = document.getElementById('nm').value;
+            var birthday = document.getElementById('bd').value;
+            console.log(name, birthday)
+            student[name] = birthday ;
+            student[birthday] = name;
+            console.log([student])
+        }
+
+        function runButtonPressed() {
+            var s_name = document.getElementById('serchnm').value;
+            var s_birthday = student[s_name];
+            console.log(student[s_name])
+            console.log(s_birthday)
+            document.getElementById('tf2').value = s_birthday;
+        }
+
+        function runCuttonPressed(){
+            var s_bd = document.getElementById('serchbd').value;
+            var s_name = student[s_bd];
+            console.log(s_name)
+            document.getElementById('tf3').value = s_name;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>登録</h1>
+    名前(スペースなし)：<input id="nm" type="text" value="">
+    <br>
+    誕生日(数字四桁)：<input id="bd" type="text" value="">
+    <button onclick="registerButtonPressed()">登録!</button>
+    <h3>名前で検索</h3>
+    名前：<input id="serchnm" type="text" value="">
+    <button onclick="runButtonPressed()">検索!</button>
+    <br>
+    <input id="tf2" type="text" value="">
+    <br>
+    <h3>誕生日で検索</h3>
+    誕生日：<input id="serchbd" type="text" value="">
+    <button onclick="runCuttonPressed()">検索!</button>
+    <br>
+    <input id="tf3" type="text" value="">
+</body>
+
+</html>
