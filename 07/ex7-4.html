@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        var word = {};
+
+        $().ready(function () {
+            word['こんにちは'] = 'どうもこんにちは！';
+            word['ありがとう'] = 'どういたしまして';
+            word['ぴえん'] = 'ぱおん';
+        });
+
+        function registerButtonPressed() {
+            var you_word = document.getElementById('you').value;
+            //var birthday = document.getElementById('bd').value;
+            var reply = word[you_word]
+            console.log(reply)
+
+            if (reply == null) {
+                var unknown = 'わからん'
+                document.getElementById('pc').value = unknown;
+
+                runButtonPressed()
+            }
+
+            else {
+                document.getElementById('pc').value = reply;
+            }
+        }
+
+        function runButtonPressed() {
+            var you_word = document.getElementById('you').value;
+            var newword = document.getElementById('n_word').value;
+            word[you_word] = newword;
+            console.log(word)
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>7-4 BOTシステム</h1>
+    あなた：<input id="you" type="text" value="">
+    <button onclick="registerButtonPressed()">発信!</button>
+    <br>
+    コンピュータ：<input id="pc" type="text" value="">
+
+    <h3>教える</h3>
+    返信：<input id="n_word" type="text" value="">
+    <button onclick="runButtonPressed()">教える！</button>
+</body>
+
+</html>
