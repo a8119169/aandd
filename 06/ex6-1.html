@@ -12,18 +12,31 @@
         function runButtonPressed() {
             var text = document.getElementById('tf1').value;
             show(text);
+            //spritで一文字づつ分ける
             var chars = text.split('');
             show(chars);
-            var text2 = chars.join('');
-            show(text2);
+            console.log(chars)
+
+            //var text2 = chars.join('');
+            //show(text2);
+
+            var stack = [];
+
+            for (var i = 0; i = chars.length ; i ++){
+            stack.push(chars.pop(''))
+            console.log(stack)
         }
+            show(stack)
+    }
+
 
     </script>
 
 </head>
 
 <body>
-    <h1>split</h1>
+    <h1>split (^○^)反転さん😈
+    </h1>
     <input id="tf1" type="text" value="こんにちは">
     <button onclick="runButtonPressed()">run!</button>
     <p id="res"></p>
