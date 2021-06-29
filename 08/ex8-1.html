@@ -11,11 +11,17 @@
 
     <script>
         function runButtonPressed() {
-            var points = [];
-            points[0] = { x: 100, y: 100 };
+            var studentsB = {};
+            studentsB['黒木'] = '6月24日';
+            studentsB['粕川'] = '5月12日';
+            studentsB['西村'] = '6月24日';
+            studentsB['上島'] = '6月5日'
+            
+
+            /*points[0] = { 黒木: 100, y: 100 };
             points[1] = { x: 100, y: 100 };
-            points[2] = { x: 100, y: 100 };
-            document.getElementById('res').innerHTML = JSON.stringify(points, null, '\t');
+            points[2] = { x: 100, y: 100 };*/
+            document.getElementById('res').innerHTML = JSON.stringify(studentsB, null, '\t');
         }
 
     </script>
