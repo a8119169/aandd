@@ -13,8 +13,36 @@
         osql.requireLogin();
 
         async function runButtonPressed() {
+            var studentsA = [];
+            var studentsB = {};
             var objects = await osql.connect('select * from Students;');
-            document.getElementById('res').innerHTML = JSON.stringify(objects, null, '\t');
+            //document.getElementById('res').innerHTML = JSON.stringify(objects, null, '\t');
+            var len = objects.length;
+            
+            for (var i = 0; i < len; i++){
+                var object = objects[i];
+
+                //console.log(object)
+                var name = object.name
+                //console.log(name)
+                studentsA.push(name)
+
+                studentsA[name]　= object.birthday 
+                console.log(studentsA[name])
+                studentsB.push(studentsA[name])
+            }
+            
+            /*var keys = Object.keys(studentsB);
+            for (var i = 0; i < keys.length; i++) {
+                var key = keys[i];
+                student.name = key;
+                student.birthday = studentsB[key];
+                console.log(student);
+                
+                studentsC.push(student);
+            }*/
+            document.getElementById('res').innerHTML = JSON.stringify(studentsA, null, '\t');
+            
         }
 
     </script>
